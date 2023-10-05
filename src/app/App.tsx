@@ -1,35 +1,25 @@
 import React, { useEffect } from 'react';
 
-import { ReturnComponentType } from 'common';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { useSelector } from 'react-redux';
 
-import s from 'app/app.module.scss';
-import { Footer } from 'components/Footer/Footer';
-import { Header } from 'components/Header/Header';
-import Main from 'components/Main/Main';
-import {
-  AppRootStateType,
-  fetchProducts,
-  InitialStateType,
-  useTypedDispatch,
-} from 'state';
+import s from './app.module.scss';
+
+import { ReturnComponentType } from 'common';
+import { Footer, Header, Main } from 'components';
+import { AppRootStateType, fetchProducts, useTypedDispatch } from 'state';
 
 export const App = (): ReturnComponentType => {
   const dispatch = useTypedDispatch();
-  const { isLoading, error } = useSelector<AppRootStateType, InitialStateType>(
-    state => state.products,
-  );
+  const { limit, page } = useSelector<AppRootStateType, any>(state => state.products);
 
   useEffect(() => {
-    // eslint-disable-next-line no-magic-numbers
-    dispatch(fetchProducts(100));
-  }, [dispatch]);
+    dispatch(fetchProducts());
+  }, [dispatch, limit, page]);
 
   return (
     <div className={s.app}>
       <Header />
-      <Main error={error} isLoading={isLoading} />
+      <Main />
       <Footer />
     </div>
   );

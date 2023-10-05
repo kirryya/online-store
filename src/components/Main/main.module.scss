@@ -3,14 +3,4 @@
 .main {
   display: flex;
   flex-direction: column;
-
-  &__loading {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__error {
-    color: red;
-    margin: 5% auto 0;
-  }
 }

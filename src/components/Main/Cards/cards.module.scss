@@ -1,9 +1,73 @@
 .cards {
-  margin: 1% 0;
-  width: 100%;
-  height: 60%;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+
+  &__content {
+    margin: 1% auto;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__select {
+    height: 20px;
+  }
+
+  &__paginate {
+    width: 200px;
+    height: 1.25rem;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    list-style-type: none;
+    box-sizing: border-box;
+
+    li a {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.25rem;
+      font-size: .875rem;
+      font-weight: 500;
+      color: black;
+      font-style: normal;
+      padding: .25rem .5rem;
+      cursor: pointer;
+      border-radius: 0.125rem;
+    }
+
+    li.previous a,
+    li.next a,
+    li.break a {
+      border-color: transparent;
+      color: black;
+    }
+
+
+    li.disabled a {
+      color: black;
+    }
+    &__active a {
+      background-color: grey;
+      color: black;
+    }
+
+    li.disable,
+    li.disabled a {
+      cursor: default;
+    }
+  }
 }

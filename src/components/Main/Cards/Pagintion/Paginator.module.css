@@ -1,23 +1,12 @@
-.paginator {
-    margin: 15px;
-    cursor: pointer;
-}
-.next {
-    margin-left: 10px;
-}
-.prev {
-    margin-right: 10px;
+.page-item.active .page-link {
+    background-color: #e61e4d;
+    border-color: #e61e4d;
 }
 
-.page {
-    border: 1px solid;
-    padding: 3px;
-    margin: 1px;
-    background-color: #8db6ee;
+.page_link {
+    color: #e61e4d;
 }
-.selectedPage {
-    font-weight: bolder;
-    border: 2px solid;
-    padding: 5px;
-    background-color: #cfdbe8;
+
+.page-link:hover {
+    color: #e61e4d;
 }

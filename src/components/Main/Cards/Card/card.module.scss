@@ -15,14 +15,11 @@
     }
 
     &__title {
-        max-width: 80px;
-        max-height: 20%;
+        width: 80px;
+        height: 20px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-
-    :hover {
-        overflow: visible;
+        cursor: pointer
     }
 }

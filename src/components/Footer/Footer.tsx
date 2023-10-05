@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { ReturnComponentType } from 'common';
-
 import s from './footer.module.scss';
 
 import facebook from 'assets/facebook.jpg';
 import github from 'assets/github.jpg';
 import instagram from 'assets/instagram.jpg';
 import twitter from 'assets/twitter.jpg';
+import { ReturnComponentType } from 'common';
 
 export const Footer = (): ReturnComponentType => {
   return (
