@@ -1,3 +1,28 @@
 .card {
-    border: 1px solid grey ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 10px;
+
+    img {
+        max-width: 100px;
+        max-height: 120px;
+        background-size: contain;
+    }
+
+    &__title {
+        max-width: 80px;
+        max-height: 20%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    :hover {
+        overflow: visible;
+    }
 }

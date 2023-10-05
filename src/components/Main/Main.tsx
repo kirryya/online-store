@@ -22,9 +22,16 @@ const Main = ({ isLoading, error }: MainType): ReturnComponentType => {
 
   return (
     <main className={s.main}>
-      <span>Продукты</span>
-      <div>{isLoading ? <span>Loading...</span> : <Cards products={products} />}</div>
-      {error && <span className="error">{error}</span>}
+      <div>
+        {isLoading ? (
+          <div className={s.main__loading}>
+            <span>Loading...</span>
+          </div>
+        ) : (
+          <Cards products={products} />
+        )}
+      </div>
+      {error && <span className={s.main__error}>{error}</span>}
     </main>
   );
 };

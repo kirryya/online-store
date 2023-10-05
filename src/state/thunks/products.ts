@@ -1,10 +1,10 @@
 import { requestAPI } from 'api';
 import { getProducts, loading, setError, TypedDispatch } from 'state';
 
-export const fetchProducts = () => async (dispatch: TypedDispatch) => {
+export const fetchProducts = (limit: number) => async (dispatch: TypedDispatch) => {
   try {
     dispatch(loading(true));
-    const { data } = await requestAPI.getProducts();
+    const { data } = await requestAPI.getProducts(limit);
 
     dispatch(getProducts(data));
   } catch (error) {

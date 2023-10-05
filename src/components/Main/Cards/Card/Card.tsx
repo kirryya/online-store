@@ -7,13 +7,15 @@ import s from './card.module.scss';
 type CardType = {
   title: string;
   price: number;
+  images: string[];
 };
 
-const Card = ({ title, price }: CardType): ReturnComponentType => {
+const Card = ({ title, price, images }: CardType): ReturnComponentType => {
   return (
     <div className={s.card}>
-      <span>{title}</span>
-      <span>{price}</span>
+      <span className={s.card__title}>{title}</span>
+      <img src={images[0]} alt="avatar" />
+      <span>Price: {price}</span>
     </div>
   );
 };

@@ -22,7 +22,8 @@ export const App = (): ReturnComponentType => {
   );
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    // eslint-disable-next-line no-magic-numbers
+    dispatch(fetchProducts(100));
   }, [dispatch]);
 
   return (

@@ -1,7 +1,7 @@
 import { instance } from 'api';
 
 export const requestAPI = {
-  getProducts() {
-    return instance.get(`/products`);
+  getProducts(limit: number) {
+    return instance.get(`/products?limit=${limit}`);
   },
 };
