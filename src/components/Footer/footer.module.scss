@@ -1,0 +1,32 @@
+@import 'src/common/styles/sass/mixins';
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  border-top: 1px solid #e5e7eb;
+  margin-bottom: 1%;
+
+  &__title {
+    @include fontStyle(400, 16px, 24px);
+
+    color: #000000;
+    opacity: 0.5;
+  }
+
+  &__links_block {
+    width: 216px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    :hover {
+    cursor: pointer;
+  }
+
+    img {
+      width: 24px;
+      height: 100%;
+    }
+  }
+}

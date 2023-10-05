@@ -1,0 +1,27 @@
+@import 'src/common/styles/sass/mixins';
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    @include fontStyle(600, 40px, 47px);
+    margin-left: 3%;
+
+    color: #000000;
+  }
+
+  .products-data {
+    margin-top: 7%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .error {
+    color: red;
+    margin: 5% auto 0;
+  }
+}
